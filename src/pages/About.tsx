@@ -1,139 +1,100 @@
 
-import { CircuitBoard, Chip, Component, Layers } from 'lucide-react';
+import { CircuitBoard, Component, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <div className="py-8">
       <section className="max-w-4xl mx-auto space-y-16">
-        <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">About ECE<span className="text-ece-blue">verse</span></h1>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            A modern learning platform designed specifically for Electronics and Communication Engineering students.
-            Our mission is to provide accessible, high-quality education resources and build a supportive community of ECE enthusiasts.
+        <div className="text-center space-y-4">
+          <CircuitBoard className="h-12 w-12 mx-auto text-ece-blue mb-2" />
+          <h1 className="text-3xl md:text-4xl font-bold">About ECE<span className="text-ece-blue">verse</span></h1>
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+            We're building the ultimate learning platform for electronics and communication engineering students.
           </p>
         </div>
         
         {/* Our Mission */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4 border-b border-ece-circuit/50 pb-2">Our Mission</h2>
-          <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6">
-            <div className="flex gap-4 items-start">
-              <div className="h-12 w-12 rounded-full bg-ece-blue/10 flex-shrink-0 flex items-center justify-center">
-                <CircuitBoard className="h-6 w-6 text-ece-blue" />
-              </div>
-              <div>
-                <h3 className="text-xl font-medium mb-2">Democratizing Electronics Education</h3>
-                <p className="text-white/70">
-                  We believe that quality education in electronics and communication engineering should be 
-                  accessible to everyone. ECEverse is built to break down barriers to learning complex 
-                  electronics concepts through interactive resources, visual learning aids, and a supportive 
-                  community platform.
-                </p>
-              </div>
-            </div>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold">Our Mission</h2>
+          <div className="bg-ece-circuit/20 rounded-lg p-6 border border-ece-circuit/50">
+            <p className="text-white/80 leading-relaxed">
+              ECEverse was created with a single mission: to make electronics education more accessible, 
+              interactive, and enjoyable. We believe that learning complex electronics concepts should be 
+              structured in a way that makes sense, with clear pathways from fundamentals to advanced topics.
+            </p>
+            <p className="text-white/80 leading-relaxed mt-4">
+              By combining structured learning pathways, interactive practice, and community support, 
+              we're creating an ecosystem where students can truly master electronics and communication engineering.
+            </p>
           </div>
         </div>
         
         {/* What We Offer */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4 border-b border-ece-circuit/50 pb-2">What We Offer</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6">
-              <div className="h-12 w-12 rounded-full bg-ece-green/10 flex items-center justify-center mb-4">
-                <Component className="h-6 w-6 text-ece-green" />
-              </div>
-              <h3 className="text-xl font-medium mb-2">Structured Learning Paths</h3>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold">What We Offer</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-ece-circuit/20 rounded-lg p-6 border border-ece-blue/30">
+              <Component className="h-8 w-8 text-ece-blue mb-4" />
+              <h3 className="text-xl font-medium mb-2">Structured Learning</h3>
               <p className="text-white/70">
-                Our flowchart-based learning paths guide you through electronics subjects in a logical, 
-                progressive manner. Each topic connects to related concepts, helping you build a 
-                comprehensive understanding of electronics engineering.
+                Subject-wise resources organized in intuitive flowcharts, allowing you to see connections between topics.
               </p>
             </div>
             
-            <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6">
-              <div className="h-12 w-12 rounded-full bg-ece-purple/10 flex items-center justify-center mb-4">
-                <Chip className="h-6 w-6 text-ece-purple" />
-              </div>
-              <h3 className="text-xl font-medium mb-2">Practice-Oriented Approach</h3>
+            <div className="bg-ece-circuit/20 rounded-lg p-6 border border-ece-green/30">
+              <Component className="h-8 w-8 text-ece-green mb-4" />
+              <h3 className="text-xl font-medium mb-2">Practice Hub</h3>
               <p className="text-white/70">
-                We emphasize learning by doing. Our platform provides numerous practice problems, 
-                interactive circuit simulations, and hands-on projects to reinforce theoretical concepts.
-                Track your progress and gradually tackle more advanced challenges.
+                Curated practice questions for each topic to test your knowledge and reinforce learning.
               </p>
             </div>
             
-            <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6">
-              <div className="h-12 w-12 rounded-full bg-ece-blue/10 flex items-center justify-center mb-4">
-                <Layers className="h-6 w-6 text-ece-blue" />
-              </div>
-              <h3 className="text-xl font-medium mb-2">Curated Resources</h3>
+            <div className="bg-ece-circuit/20 rounded-lg p-6 border border-ece-purple/30">
+              <CircuitBoard className="h-8 w-8 text-ece-purple mb-4" />
+              <h3 className="text-xl font-medium mb-2">Community Forum</h3>
               <p className="text-white/70">
-                We've gathered the best learning materials from around the web and created original content 
-                to supplement them. From textbook references to video tutorials and interactive simulations, 
-                we provide a diverse range of resources for different learning styles.
-              </p>
-            </div>
-            
-            <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6">
-              <div className="h-12 w-12 rounded-full bg-ece-green/10 flex items-center justify-center mb-4">
-                <CircuitBoard className="h-6 w-6 text-ece-green" />
-              </div>
-              <h3 className="text-xl font-medium mb-2">Supportive Community</h3>
-              <p className="text-white/70">
-                Learning electronics is more effective when done together. Our community forum connects you 
-                with fellow students and experienced engineers who can help answer questions, provide feedback, 
-                and share insights from industry experience.
+                Connect with fellow ECE students, ask questions, and share knowledge in our supportive community.
               </p>
             </div>
           </div>
         </div>
         
         {/* Our Team */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4 border-b border-ece-circuit/50 pb-2">Our Team</h2>
-          <p className="text-white/70 mb-6">
-            ECEverse is built by a passionate team of electronics engineers, educators, and software developers 
-            who believe in the power of accessible education.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6 text-center">
-              <div className="h-24 w-24 rounded-full bg-ece-blue/10 mx-auto mb-4 flex items-center justify-center">
-                <Component className="h-10 w-10 text-ece-blue" />
-              </div>
-              <h3 className="text-lg font-medium">Dr. Sarah Chen</h3>
-              <p className="text-white/60">Founder & Electronics Educator</p>
-            </div>
-            
-            <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6 text-center">
-              <div className="h-24 w-24 rounded-full bg-ece-green/10 mx-auto mb-4 flex items-center justify-center">
-                <Chip className="h-10 w-10 text-ece-green" />
-              </div>
-              <h3 className="text-lg font-medium">Prof. Michael Rivera</h3>
-              <p className="text-white/60">Content Director</p>
-            </div>
-            
-            <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6 text-center">
-              <div className="h-24 w-24 rounded-full bg-ece-purple/10 mx-auto mb-4 flex items-center justify-center">
-                <CircuitBoard className="h-10 w-10 text-ece-purple" />
-              </div>
-              <h3 className="text-lg font-medium">Jamie Wilson</h3>
-              <p className="text-white/60">Lead Developer</p>
-            </div>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold">Our Team</h2>
+          <div className="bg-ece-circuit/20 rounded-lg p-6 border border-ece-circuit/50">
+            <p className="text-white/80 leading-relaxed">
+              ECEverse is built by a team of passionate electronics engineers, educators, and developers 
+              who understand the challenges of learning complex technical subjects. 
+            </p>
+            <p className="text-white/80 leading-relaxed mt-4">
+              We've experienced firsthand the gaps in traditional electronics education, and we're committed 
+              to creating a platform that bridges those gaps with intuitive learning paths and practical resources.
+            </p>
           </div>
         </div>
         
-        {/* Contact Information */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4 border-b border-ece-circuit/50 pb-2">Contact Us</h2>
-          <div className="bg-ece-circuit/20 border border-ece-circuit/50 rounded-lg p-6">
-            <p className="text-white/70 mb-4">
-              Have questions, suggestions, or feedback? We'd love to hear from you!
-            </p>
-            <div className="space-y-2 text-white/60">
-              <p>✉️ Email: contact@eceverse.edu</p>
-              <p>🌐 Social Media: @ECEverse</p>
-              <p>📍 Location: Global (Remote)</p>
-            </div>
+        {/* Join Us */}
+        <div className="text-center space-y-6">
+          <h2 className="text-2xl font-bold">Join Our Community</h2>
+          <p className="text-white/80 max-w-2xl mx-auto">
+            Whether you're a student just starting your ECE journey or an experienced professional looking to 
+            share knowledge, ECEverse is the platform for you.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Button asChild className="bg-ece-blue hover:bg-ece-blue/80">
+              <Link to="/signup">
+                Create an Account
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="border-ece-circuit hover:border-ece-blue hover:text-ece-blue">
+              <Link to="/community">
+                Explore Community
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CircuitBoard, Chip, Menu, X } from 'lucide-react';
+import { CircuitBoard, Component, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -56,15 +56,15 @@ const Navbar = () => {
       )}>
         <div className="container py-4 flex flex-col gap-4">
           <Link to="/" className="p-2 hover:bg-ece-circuit/20 rounded-md flex items-center gap-2" onClick={toggleMenu}>
-            <Chip className="h-4 w-4 text-ece-blue" />
+            <Component className="h-4 w-4 text-ece-blue" />
             Home
           </Link>
           <Link to="/practice" className="p-2 hover:bg-ece-circuit/20 rounded-md flex items-center gap-2" onClick={toggleMenu}>
-            <Chip className="h-4 w-4 text-ece-green" />
+            <Component className="h-4 w-4 text-ece-green" />
             Practice Hub
           </Link>
           <Link to="/community" className="p-2 hover:bg-ece-circuit/20 rounded-md flex items-center gap-2" onClick={toggleMenu}>
-            <Chip className="h-4 w-4 text-ece-purple" />
+            <Component className="h-4 w-4 text-ece-purple" />
             Community Forum
           </Link>
           <Link to="/about" className="p-2 hover:bg-ece-circuit/20 rounded-md flex items-center gap-2" onClick={toggleMenu}>

@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { CircuitBoard, Chip, ArrowRight, Component, Layers } from 'lucide-react';
+import { CircuitBoard, Component, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Home = () => {
@@ -57,7 +57,7 @@ const Home = () => {
             {/* Feature 1 */}
             <div className="bg-ece-circuit/20 backdrop-blur-sm border border-ece-circuit/50 rounded-lg p-6 hover:border-ece-blue/50 transition-colors">
               <div className="h-12 w-12 rounded-full bg-ece-blue/10 flex items-center justify-center mb-4">
-                <Chip className="h-6 w-6 text-ece-blue" />
+                <Component className="h-6 w-6 text-ece-blue" />
               </div>
               <h3 className="text-xl font-medium mb-2">Interactive Learning</h3>
               <p className="text-white/70">Subject-wise resources organized in intuitive flowcharts.</p>
@@ -93,7 +93,7 @@ const Home = () => {
             {/* Subject 1 */}
             <div className="group bg-ece-circuit/20 backdrop-blur-sm border border-ece-circuit/50 rounded-lg p-4 hover:border-ece-blue/50 transition-colors flex flex-col items-center text-center">
               <div className="h-12 w-12 rounded-full bg-ece-blue/10 flex items-center justify-center mb-3">
-                <Chip className="h-6 w-6 text-ece-blue group-hover:animate-pulse-glow transition-all" />
+                <Component className="h-6 w-6 text-ece-blue group-hover:animate-pulse-glow transition-all" />
               </div>
               <h3 className="text-lg font-medium">Digital Electronics</h3>
             </div>
@@ -109,7 +109,7 @@ const Home = () => {
             {/* Subject 3 */}
             <div className="group bg-ece-circuit/20 backdrop-blur-sm border border-ece-circuit/50 rounded-lg p-4 hover:border-ece-purple/50 transition-colors flex flex-col items-center text-center">
               <div className="h-12 w-12 rounded-full bg-ece-purple/10 flex items-center justify-center mb-3">
-                <Layers className="h-6 w-6 text-ece-purple group-hover:animate-pulse-glow transition-all" />
+                <Component className="h-6 w-6 text-ece-purple group-hover:animate-pulse-glow transition-all" />
               </div>
               <h3 className="text-lg font-medium">VLSI Design</h3>
             </div>

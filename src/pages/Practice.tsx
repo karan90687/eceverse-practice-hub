@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Chip, CircuitBoard, ArrowRight, Component, Layers } from 'lucide-react';
+import { CircuitBoard, Component, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // Interface for subject nodes
@@ -31,7 +31,7 @@ const subjects: SubjectNode[] = [
     id: 'digital',
     title: 'Digital Electronics',
     description: 'Logic gates, circuits, and digital systems design',
-    icon: Chip,
+    icon: Component,
     progress: 50,
     color: 'green',
     position: { x: 30, y: 50 },
@@ -51,7 +51,7 @@ const subjects: SubjectNode[] = [
     id: 'microprocessors',
     title: 'Microprocessors',
     description: 'Architecture and programming of microprocessors',
-    icon: Chip,
+    icon: Component,
     progress: 10,
     color: 'blue',
     position: { x: 20, y: 80 },
@@ -81,7 +81,7 @@ const subjects: SubjectNode[] = [
     id: 'communication',
     title: 'Communication Systems',
     description: 'Principles of electronic communication systems',
-    icon: Layers,
+    icon: Component,
     progress: 5,
     color: 'blue',
     position: { x: 80, y: 80 },
@@ -255,7 +255,7 @@ const Practice = () => {
                     </div>
                   </li>
                   <li className="flex items-center gap-3 p-2 rounded hover:bg-white/5">
-                    <Chip className="h-4 w-4 text-ece-purple" />
+                    <Component className="h-4 w-4 text-ece-purple" />
                     <div>
                       <p className="font-medium">Interactive Lab Simulation</p>
                       <p className="text-sm text-white/60">Simulation • 3 modules</p>

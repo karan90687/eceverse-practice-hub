@@ -1,5 +1,5 @@
 
-import { CircuitBoard, Chip, Home, Github } from 'lucide-react';
+import { CircuitBoard, Component, ArrowRight, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -53,7 +53,7 @@ const Footer = () => {
             <h3 className="font-medium mb-4 text-white/80">Connect With Us</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-white/60 hover:text-ece-blue">
-                <Home className="h-5 w-5" />
+                <Component className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
               <a href="#" className="text-white/60 hover:text-ece-blue">
@@ -61,7 +61,7 @@ const Footer = () => {
                 <span className="sr-only">GitHub</span>
               </a>
               <a href="#" className="text-white/60 hover:text-ece-blue">
-                <Chip className="h-5 w-5" />
+                <Component className="h-5 w-5" />
                 <span className="sr-only">Discord</span>
               </a>
             </div>

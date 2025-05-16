@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { CircuitBoard, Chip, Component, Search, Filter, ArrowRight } from 'lucide-react';
+import { CircuitBoard, Component, Search, Filter, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
