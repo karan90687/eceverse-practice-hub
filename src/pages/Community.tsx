@@ -1,9 +1,10 @@
 
 import React, { useState } from 'react';
-import { CircuitBoard, Component, ArrowRight, BookOpen, MessageSquare, Filter, Search, BookText, Video, Audio } from 'lucide-react';
+import { CircuitBoard, Component, ArrowRight, BookOpen, MessageSquare, Filter, Search, BookText, Video, AudioLines } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { toast } from "@/components/ui/use-toast";
 
 // Sample forum posts for demo
 const forumPosts = [
@@ -79,7 +80,7 @@ const learningResources = [
     title: "Signal Processing Basics",
     type: "podcast",
     format: "audio",
-    icon: Audio,
+    icon: AudioLines,
     author: "ECE TalkShow",
     duration: "3 episodes",
     level: "Intermediate",
@@ -91,6 +92,22 @@ const Community = () => {
   const [activeTab, setActiveTab] = useState("forum");
   const [searchQuery, setSearchQuery] = useState("");
 
+  const handleNewPost = () => {
+    toast({
+      title: "New Post",
+      description: "This feature will be available soon!",
+      duration: 3000,
+    });
+  };
+
+  const handleContribute = () => {
+    toast({
+      title: "Contribute Learning Material",
+      description: "Thank you for your interest! This feature will be available soon.",
+      duration: 3000,
+    });
+  };
+
   return (
     <div className="py-8">
       <section className="max-w-6xl mx-auto">
@@ -101,11 +118,12 @@ const Community = () => {
               Connect with fellow ECE students, share knowledge, ask questions, and access curated learning resources.
             </p>
           </div>
-          <Button asChild className="bg-ece-purple hover:bg-ece-purple/80">
-            <a href="#">
-              New Post
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+          <Button 
+            className="bg-ece-purple hover:bg-ece-purple/80"
+            onClick={handleNewPost}
+          >
+            New Post
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
 
